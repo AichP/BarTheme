@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet"/>
+    <script type="text/javascript" src="mock.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="initialize()" oncontextmenu="return false;">
+<div>
+    <div class="archlogo">
+        <div class="leftoftime">
+            <div id="user_template" class="user">
+                <div class="user_image_wrapper">
+                    <img class="user_image" src=""/>
+                </div>
+                <div class="user_name"> | </div>
+            </div>
+            <div id="password_container">
+                <form action="javascript: provide_secret()" class="password_prompt">
+                    <input id="password_entry" type="password" placeholder="password" />
+                </form>
+            </div>
+        </div>
+        <div id="current_time" class="time"></div>
+        <div class="rightoftime">
+            <a href="#hide1" class="hide" id="hide1"><i class="fas fa-power-off"></i></a>
+            <a href="#show1" class="show" id="show1"><i class="fas fa-times"></i></a>
+            <div class="list">
+                <div id="action_shutdown" class="action button">
+                    <div onclick="lightdm.shutdown();"><i class="fas fa-power-off"></i></div>
+                </div>
+
+            </div>
+            <div class="list">
+                <div id="action_suspend" class="action button">
+                    <div onclick="lightdm.restart();"><i class="fas fa-bed"></i></div>
+                </div>
+            </div>
+            <div class="list">
+                <div id="action_restart" class="action button">
+                    <div onclick="lightdm.restart();"><i class="fas fa-redo-alt"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="login_content">
+    <div class="login_container">
+
+    </div>
+</div>
+<div id="message" class="smooth">
+    <div id="message_content"></div>
+</div>
+</body>
+</html>
