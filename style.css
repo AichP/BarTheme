@@ -10,21 +10,11 @@ body {
   width: 100%;
   margin: 0;
   color: #EFEFEF;
-
   font-size: 10pt;
 }
 
 body, span, div, img {
   -webkit-user-select: none;
-}
-
-input {
-  border: 1px solid white;
-  border-radius: 4px;
-  padding: 4px;
-  box-shadow: 0 0 1px 1px #222;
-
-  -webkit-transition: box-shadow 0.3s ease-in-out;
 }
 
 input:focus {
@@ -65,7 +55,7 @@ a {
 }
 
 .archlogo {
-  margin: 10px auto 10px auto;
+  margin: 10px auto 0px auto;
   /*padding: 0 !important;*/
   height: 24px !important;
   width: 820px !important;
@@ -79,28 +69,27 @@ a {
   margin:0 auto;
   color: #999999;
   font-family: "NotoSans-Regular", sans-serif;
-  width: 320px;
+  width: 30%;
 }
 
 .rightoftime {
   font-size: 16px;
-  color: #ffffff;
+  color: #aaaaaa;
   float:right;
-  margin-top: 3px;
   padding-left: 5px;
-  width: 150px;
+  width: 25%;
   height: 24px;
-
+  margin-top: 4px;
 }
 
 .leftoftime {
-  margin-top: -15px;
   font-size: 15px;
-  color: #999999;
+  color: #aaaaaa;
   font-family: "NotoSans-Regular", sans-serif;
   float: left;
-  width: 200px;
+  width: 40%;
   height: 24px;
+  display: inline;
 }
 
 .login_content {
@@ -113,24 +102,34 @@ a {
   vertical-align: middle;
 }
 
+.password_left{
+  float: left;
+  width: 80%;
+}
+
 #message {
-  display: table-row;
-  height: 80px;
   -webkit-transition: visibility 0s, opacity 0.3s, height 0.3s;
+  float:right;
+  width: 24px;
+  margin-top: 4px;
 }
 
 #message.hidden {
   height: 0px;
+  display: inline-block;
 }
 
 #message_content {
-  display: table-cell;
-  vertical-align: top;
-  text-align: center;
+  font-size: 15px;
+  color: #13aa18;
+  height: 24px;
 }
 
 #message_content.error {
-  color: #F55;
+  color: #c90200;
+}
+#user_template{
+  width: 20%;
 }
 
 .user {
@@ -143,26 +142,23 @@ a {
 }
 
 .user_image_wrapper {
-
+  margin-top: 2px;
+  margin-left: 10px;
+  height: 22px;
+  width: 22px;
+  float: left;
 }
 
-/*.user_image_wrapper:hover {
-  box-shadow:  0 0 5px 5px #666;
-  -webkit-transition: all 0.2s ease-in-out;
-}*/
-
 .user_image {
-  height: 0px;
-  width: 0px;
+  height: 20px;
+  width: 20px;
 }
 
 .user_name {
-
   font-family: NotoSans-Regular, sans-serif !important;
   font-size: 16px;
-
-  margin-left: 15px;
-  margin-right: 0px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .action {
@@ -177,8 +173,7 @@ a {
 
 .list {
   display:none;
-  height:auto;
-  margin:0;
+  height:24px;
   float: right;
 }
 .show {
@@ -202,7 +197,6 @@ a {
   margin-right: 12px;
   margin-left: 12px;
   float: right;
-  margin-bottom: 25px;
 }
 
 
@@ -216,14 +210,28 @@ a {
   color: #fff;
 }
 
+#password_container{
+  height: 24px;
+  display: inline-block;
+  margin:0 auto;
+  width: 40%;
+}
+
+form {
+  margin-bottom: 0;
+  float:left;
+
+}
+
 input{
   background-color: transparent;
-  height: 24px;
+  height: 22px;
   border: none;
+  font-size: 10px;
   border-radius: 0px;
   box-shadow: none;
-  width: 100px;
-  float: right;
+  width: 80%;
+  padding: 0px;
 
 }
 
@@ -234,4 +242,24 @@ input:focus{
   text-shadow: none;
 }
 
-input[type="password"] {font:small-caption;font-size:16px}
+input[type="password"] {
+  font:small-caption;
+  font-size:12px;
+
+}
+
+#cinematic-video {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: opacity 0.5s ease-out;
+  opacity: 0;
+  z-index: -1;
+}
+
+#cinematic-video.visible {
+  opacity: 1;
+}

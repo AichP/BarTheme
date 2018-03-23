@@ -59,7 +59,7 @@ function authentication_complete() {
   if (lightdm.is_authenticated) {
     lightdm.login(lightdm.authentication_user, lightdm.default_session);
   } else {
-    show_error("Authentication Failed");
+    show_error("<i class=\"fas fa-times\"></i>\n");
     start_authentication(selected_user);
   }
 }
@@ -80,7 +80,7 @@ function start_authentication(username) {
 }
 
 function provide_secret() {
-  show_message("Logging in...");
+  show_message("<i class=\"fas fa-check\"></i>");
   entry = document.querySelector('#password_entry');
   lightdm.provide_secret(entry.value);
 }
