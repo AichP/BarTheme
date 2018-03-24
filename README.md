@@ -1,4 +1,4 @@
-# LineGreeter
+# BarTheme
 Lightdm webkit2 greeter theme derived from archsingle greeter theme
 
 ![screenshot1](screenshot1.jpg?raw=true "Linegreetertheme")
